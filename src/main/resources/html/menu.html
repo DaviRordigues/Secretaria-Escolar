@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Application</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="menu-card" onclick="navigateTo('cadastroAluno.html')">
+  <h3>Cadastro de Aluno</h3>
+  <p>Gerencie o cadastro de alunos.</p>
+</div>
+<div class="menu-card" onclick="navigateTo('cadastroTurma.html')">
+  <h3>Cadastro de Turma</h3>
+  <p>Gerencie o cadastro de turmas.</p>
+</div>
+<div class="menu-card" onclick="navigateTo('cadastroProfessor.html')">
+  <h3>Cadastro de Professor</h3>
+  <p>Gerencie o cadastro de professores.</p>
+</div>
+<div class="menu-card" onclick="navigateTo('cadastroHorario.html')">
+  <h3>Cadastro de Horário</h3>
+  <p>Gerencie o cadastro de horários.</p>
+</div>
+
+<script>
+  function navigateTo(page) {
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>

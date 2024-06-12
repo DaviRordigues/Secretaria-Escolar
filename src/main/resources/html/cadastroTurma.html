@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Turma</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Cadastro de Turma</h1>
+<div>
+  <input type="text" id="turmaSala" placeholder="Sala">
+  <input type="text" id="turmaHorario" placeholder="Horário">
+  <input type="text" id="turmaUc" placeholder="Unidade Curricular">
+  <button onclick="addTurma()">Salvar</button>
+</div>
+<h2>Lista de Turmas</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Sala</th>
+    <th>Horário</th>
+    <th>Unidade Curricular</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+  <tbody id="turmaList">
+  <!-- Turmas serão adicionadas aqui -->
+  </tbody>
+</table>
+
+<script src="js/cadastroTurma.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Professor</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Cadastro de Professor</h1>
+<div>
+    <input type="text" id="professorNome" placeholder="Nome">
+    <input type="text" id="professorMatricula" placeholder="Matrícula">
+    <input type="text" id="professorCpf" placeholder="CPF">
+    <input type="text" id="professorUc" placeholder="Unidade Curricular">
+    <button onclick="addProfessor()">Salvar</button>
+</div>
+<h2>Lista de Professores</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>CPF</th>
+        <th>Unidade Curricular</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody id="professorList">
+    <!-- Professores serão adicionados aqui -->
+    </tbody>
+</table>
+
+<script src="js/cadastroProfessor.js"></script>
+</body>
+</html>

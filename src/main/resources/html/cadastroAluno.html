@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Aluno</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Cadastro de Aluno</h1>
+<div>
+  <input type="text" id="alunoNome" placeholder="Nome do Aluno">
+  <input type="text" id="alunoCPF" placeholder="CPF do Aluno">
+  <input type="text" id="alunoMatricula" placeholder="Matrícula do Aluno">
+  <input type="number" id="alunoIdade" placeholder="Idade do Aluno">
+  <button onclick="addAluno()">Salvar</button>
+</div>
+<h2>Lista de Alunos</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>Matrícula</th>
+    <th>Idade</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+  <tbody id="alunoList">
+  </tbody>
+</table>
+
+<script src="js/cadastroAluno.js"></script>
+</body>
+</html>
