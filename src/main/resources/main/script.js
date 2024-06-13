@@ -1,15 +1,18 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var errorMessage = document.getElementById('errorMessage');
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('loginForm');
 
-    if (email === "123" || password === "123") {
-        errorMessage.textContent = "Todos os campos são obrigatórios.";
-    } else {
-        errorMessage.textContent = "";
-        alert("Login bem-sucedido! E-mail: " + email);
-        // Aqui você pode adicionar a lógica para enviar os dados para o servidor ou realizar outras ações
-    }
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email === '123@123' && password === '123') {
+            window.location.href = 'menu.html';
+        } else {
+            var errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = 'Usuário ou senha incorretos. Tente novamente.';
+        }
+    });
 });

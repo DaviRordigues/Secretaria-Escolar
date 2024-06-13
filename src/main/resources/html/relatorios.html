@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilos específicos para a página de relatórios, se necessário */
+        .report-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .report-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="report-container">
+    <h2>Relatórios</h2>
+
+    <div class="report-item">
+        <h3>Relatório de Alunos</h3>
+        <p>Número total de alunos cadastrados: 150</p>
+        <p>Alunos ativos: 130</p>
+        <p>Alunos inativos: 20</p>
+    </div>
+
+    <div class="report-item">
+        <h3>Relatório de Turmas</h3>
+        <p>Número total de turmas cadastradas: 10</p>
+        <p>Turmas ativas: 8</p>
+        <p>Turmas inativas: 2</p>
+    </div>
+
+    <div class="report-item">
+        <h3>Relatório de Professores</h3>
+        <p>Número total de professores cadastrados: 20</p>
+        <p>Professores ativos: 18</p>
+        <p>Professores inativos: 2</p>
+    </div>
+
+    <div class="report-item">
+        <h3>Relatório de Horários</h3>
+        <p>Número total de horários cadastrados: 50</p>
+        <p>Horários ocupados: 30</p>
+        <p>Horários disponíveis: 20</p>
+    </div>
+
+    <!-- Botão para voltar para o login -->
+    <button onclick="navigateTo('menu.html')">Voltar para o menu</button>
+</div>
+
+<script>
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+</script>
+</body>
+</html>

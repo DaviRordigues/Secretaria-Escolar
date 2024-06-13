@@ -1,7 +1,10 @@
+// AlunoServiceImpl.java
 package com.davi.template.service.imp;
 
 import com.davi.template.entity.Aluno;
+import com.davi.template.entity.Turma;
 import com.davi.template.repositorio.AlunoRepository;
+import com.davi.template.repositorio.TurmaRepository;
 import com.davi.template.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,9 @@ public class AlunoServiceImpl implements AlunoService {
 
     @Autowired
     private AlunoRepository alunoRepository;
+
+    @Autowired
+    private TurmaRepository turmaRepository;
 
     @Override
     public Optional<Aluno> buscarAlunoPorId(Long id) {
@@ -32,20 +38,24 @@ public class AlunoServiceImpl implements AlunoService {
     }
 
     @Override
-    public Aluno createAluno(Aluno aluno) {
+    public Aluno createAluno(Aluno aluno, Long turmaId) {  // Assinatura do método corrigida
+        Turma turma = turmaRepository.findById(turmaId).orElse(null);
+        if (turma != null) {
+            aluno.setTurma(turma);
+        }
         return alunoRepository.save(aluno);
     }
 
     @Override
     public Aluno updateAluno(Long id, Aluno alunoDetails) {
         Optional<Aluno> alunoOptional = alunoRepository.findById(id);
-
         if (alunoOptional.isPresent()) {
             Aluno aluno = alunoOptional.get();
             aluno.setNome(alunoDetails.getNome());
             aluno.setCpf(alunoDetails.getCpf());
             aluno.setMatricula(alunoDetails.getMatricula());
             aluno.setIdade(alunoDetails.getIdade());
+            aluno.setTurma(alunoDetails.getTurma());
             return alunoRepository.save(aluno);
         } else {
             return null;
@@ -55,7 +65,6 @@ public class AlunoServiceImpl implements AlunoService {
     @Override
     public boolean deleteAluno(Long id) {
         Optional<Aluno> alunoOptional = alunoRepository.findById(id);
-
         if (alunoOptional.isPresent()) {
             alunoRepository.deleteById(id);
             return true;

@@ -1,4 +1,4 @@
-package com.davi.template.controller;
+package com.davi.template.controler;
 
 import com.davi.template.entity.Turma;
 import com.davi.template.service.TurmaService;

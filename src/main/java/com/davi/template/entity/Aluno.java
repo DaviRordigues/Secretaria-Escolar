@@ -1,10 +1,6 @@
 package com.davi.template.entity;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Aluno {
@@ -17,6 +13,10 @@ public class Aluno {
     private String cpf;
     private String matricula;
     private int idade;
+
+    @ManyToOne
+    @JoinColumn(name = "turma_id")
+    private Turma turma;
 
     // Construtores, getters e setters
 
@@ -31,8 +31,7 @@ public class Aluno {
         this.idade = idade;
     }
 
-    // Getters e setters omitidos para brevidade
-
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -71,5 +70,13 @@ public class Aluno {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public Turma getTurma() { // Método getTurma corrigido
+        return turma;
+    }
+
+    public void setTurma(Turma turma) { // Método setTurma corrigido
+        this.turma = turma;
     }
 }

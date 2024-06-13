@@ -7,10 +7,9 @@ import java.util.Optional;
 
 public interface AlunoService {
     Optional<Aluno> buscarAlunoPorId(Long id);
-
     List<Aluno> getAllAlunos();
     Aluno getAlunoById(Long id);
-    Aluno createAluno(Aluno aluno);
+    Aluno createAluno(Aluno aluno, Long turmaId);
     Aluno updateAluno(Long id, Aluno alunoDetails);
     boolean deleteAluno(Long id);
 }

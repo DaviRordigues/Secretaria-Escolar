@@ -2,7 +2,6 @@ package com.davi.template.controler;
 
 import com.davi.template.entity.Aluno;
 import com.davi.template.service.AlunoService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,8 +33,8 @@ public class AlunoController {
     }
 
     @PostMapping
-    public ResponseEntity<Aluno> createAluno(@RequestBody Aluno aluno) {
-        Aluno novoAluno = alunoService.createAluno(aluno);
+    public ResponseEntity<Aluno> createAluno(@RequestBody Aluno aluno, @RequestParam Long turmaId) {
+        Aluno novoAluno = alunoService.createAluno(aluno, turmaId);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoAluno);
     }
 

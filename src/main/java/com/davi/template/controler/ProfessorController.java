@@ -1,4 +1,4 @@
-package com.davi.template.controller;
+package com.davi.template.controler;
 
 import com.davi.template.entity.Professor;
 import com.davi.template.service.ProfessorService;
